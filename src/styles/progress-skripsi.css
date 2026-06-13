@@ -1,0 +1,741 @@
+/* Progress Skripsi Page Styles */
+
+.progress-page {
+  background: #f8fafc;
+}
+
+.progress-content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* Left is wider */
+  gap: 24px;
+  padding: 32px 40px;
+}
+
+/* Left Column */
+.progress-left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hero-progress-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.hero-progress-info {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.thesis-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 24px;
+  line-height: 1.4;
+  max-width: 100%;
+}
+
+.thesis-badges {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.badge-green {
+  background-color: #ecfdf5;
+  color: #047857;
+  padding: 10px 24px;
+  border-radius: 24px;
+  border: 1px solid #a7f3d0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.badge-blue {
+  background-color: #f0f9ff;
+  color: #0369a1;
+  padding: 10px 24px;
+  border-radius: 24px;
+  border: 1px solid #bae6fd;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.thesis-status-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.thesis-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #16a34a;
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+.hero-progress-circle-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.circle-border {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 10px solid #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-value {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #006098;
+  line-height: 1;
+}
+
+.circle-label {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+/* Milestone Timeline */
+.milestone-card {
+  padding: 32px;
+}
+
+.milestone-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.milestone-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+}
+
+.milestone-count {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.milestone-timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.milestone-item {
+  display: flex;
+  gap: 24px;
+  position: relative;
+  min-height: 80px;
+}
+
+.milestone-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.milestone-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  z-index: 2;
+  box-shadow: 0 0 0 4px #ffffff;
+}
+
+.timeline-line {
+  width: 2px;
+  background-color: #e2e8f0;
+  flex: 1;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.milestone-item.active .timeline-line {
+  background-color: #e2e8f0;
+}
+
+.milestone-details {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 24px;
+}
+
+.milestone-item.locked .milestone-text h4 {
+  color: #cbd5e1;
+}
+
+.milestone-item.locked .milestone-text p {
+  color: #cbd5e1;
+}
+
+.milestone-text h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #006098;
+  margin-bottom: 4px;
+}
+
+.milestone-text p {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.milestone-progress {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-percentage {
+  background-color: #f1f5f9;
+  color: #cbd5e1;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.progress-arrow {
+  color: #cbd5e1;
+}
+
+.milestone-item.active .progress-arrow {
+  color: #0f172a;
+}
+
+.milestone-expanded-area {
+  padding-bottom: 24px;
+}
+
+.milestone-bar-container-new {
+  width: 100%;
+  height: 6px;
+  background-color: #e2e8f0;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.milestone-bar-new {
+  height: 100%;
+  background-color: #006098;
+  border-radius: 4px;
+}
+
+.milestone-expanded-card {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.task-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.task-dot.green {
+  background-color: #16a34a;
+}
+
+.task-icon.green-text {
+  color: #16a34a;
+  font-size: 1.1rem;
+}
+
+.task-text {
+  font-size: 0.9rem;
+  color: #334155;
+  font-weight: 500;
+}
+
+.task-text.green-text {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.task-circle.empty {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #cbd5e1;
+}
+
+.milestone-icon.active-icon {
+  box-shadow: 0 0 0 4px #ffffff, 0 0 0 6px #bae6fd;
+}
+
+
+/* Right Column */
+.progress-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.stat-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-icon {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.stat-icon.blue {
+  color: #0284c7;
+}
+
+.stat-icon.green {
+  color: #16a34a;
+}
+
+.stat-icon.red {
+  color: #e11d48;
+}
+
+.stat-icon.orange {
+  color: #ea580c;
+}
+
+.stat-title {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.stat-value span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #94a3b8;
+  margin-left: 4px;
+}
+
+.task-card {
+  padding: 24px;
+}
+
+.empty-task {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px 0 0 0;
+}
+
+.file-ghost-icon {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.question-mark {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #ef4444;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.empty-task p {
+  color: #64748b;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.btn-dashed {
+  background: transparent;
+  border: 1px dashed #cbd5e1;
+  color: #64748b;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-dashed:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  color: #0f172a;
+}
+
+.message-card {
+  background: linear-gradient(135deg, #006098 0%, #004d7a 100%);
+  color: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.message-card::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  width: 100px;
+  height: 100px;
+  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" fill="rgba(255,255,255,0.1)"/></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.message-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #bae6fd;
+  margin-bottom: 16px;
+}
+
+.message-content {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.message-sender {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sender-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #0ea5e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+}
+
+.sender-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.sender-info strong {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.sender-info span {
+  font-size: 0.75rem;
+  color: #e0f2fe;
+}
+
+/* Task Modal Animations */
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalPopIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Task Modal */
+.task-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: overlayFadeIn 0.3s ease-out forwards;
+}
+
+.task-modal-content {
+  background-color: #ffffff;
+  border-radius: 16px;
+  width: 750px;
+  max-width: 95%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  position: relative;
+  animation: modalPopIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.task-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.task-modal-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.form-row-3 {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #1e293b;
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon input {
+  padding-right: 36px;
+}
+
+.input-with-icon input[type="date"],
+.input-with-icon input[type="time"] {
+  padding-right: 12px;
+  /* Reset padding to natural */
+}
+
+.icon-right {
+  position: absolute;
+  right: 12px;
+  color: #64748b;
+  pointer-events: none;
+}
+
+.input-with-icon input[type="date"],
+.input-with-icon input[type="time"] {
+  position: relative;
+}
+
+.input-with-icon input[type="date"]::-webkit-calendar-picker-indicator,
+.input-with-icon input[type="time"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+}
+
+.file-upload-wrapper {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.btn-file {
+  background-color: #e2e8f0;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  border-right: 1px solid #cbd5e1;
+}
+
+.file-name-display {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  background-color: #ffffff;
+  color: #64748b;
+}
+
+.file-icon {
+  font-size: 1.2rem;
+  color: #475569;
+}
+
+@media (max-width: 1024px) {
+  .progress-content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-progress-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .hero-progress-info {
+    padding-right: 0;
+  }
+
+  .hero-badges-wrapper {
+    align-items: center;
+  }
+
+  .thesis-badges {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .thesis-status-wrapper {
+    justify-content: center;
+  }
+
+  .thesis-status {
+    width: auto;
+    text-align: center;
+  }
+
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-content-grid {
+    padding: 16px;
+  }
+  
+  .milestone-container {
+    padding: 24px 16px;
+  }
+  
+  .milestone-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+}

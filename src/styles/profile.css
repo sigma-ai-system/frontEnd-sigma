@@ -1,0 +1,603 @@
+/* =========================================
+   Profile Page Styles
+   ========================================= */
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+.profile-header-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-info-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.profile-avatar-wrapper {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 20px;
+  padding: 6px;
+  background: #e0f2fe;
+}
+
+.profile-avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.profile-avatar-badge {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  width: 24px;
+  height: 24px;
+  background: #16a34a;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  font-size: 0.75rem;
+}
+
+.profile-name-light {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #1e293b;
+  margin: 0 0 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.badge-aktif-profile {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #86efac;
+  color: #166534;
+}
+
+.profile-study-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: #475569;
+  margin-bottom: 12px;
+}
+
+.profile-study-info svg {
+  color: #0284c7;
+}
+
+.profile-tags {
+  display: flex;
+  gap: 12px;
+}
+
+.profile-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #475569;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.tag-icon {
+  color: #0284c7;
+}
+
+.profile-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.btn-edit-profile {
+  background: #005a8c;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+  box-shadow: 0 6px 16px rgba(0, 90, 140, 0.25);
+}
+
+.btn-edit-profile:hover {
+  background: #004d7a;
+}
+
+.last-updated-text {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.skripsi-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.skripsi-icon {
+  width: 48px;
+  height: 48px;
+  background: #f1f5f9;
+  color: #005a8c;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.skripsi-content p.skripsi-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+  margin: 0 0 8px 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.skripsi-content h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #334155;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.prediksi-banner {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.prediksi-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.prediksi-icon {
+  width: 48px;
+  height: 48px;
+  background: #dcfce7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+}
+
+.prediksi-text p {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  margin: 0 0 4px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.prediksi-status-light {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #15803d;
+  margin: 0;
+}
+
+.prediksi-status-light span {
+  font-weight: 400;
+  color: #475569;
+  font-size: 1.1rem;
+}
+
+.prediksi-right {
+  font-size: 0.75rem;
+  color: #15803d;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.profile-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-card-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Progress Circular */
+.progress-circular-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.progress-circular-info {
+  flex: 1;
+}
+
+.progress-circular-info h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 8px 0;
+}
+
+.progress-circular-info p {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0 0 12px 0;
+}
+
+.progress-bar-linear {
+  height: 8px;
+  background: #f1f5f9;
+  border-radius: 4px;
+  width: 80%;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: #005a8c;
+  border-radius: 4px;
+}
+
+.circular-chart-profile {
+  display: block;
+  margin: 0;
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.circular-chart-profile .circle-bg {
+  fill: none;
+  stroke: #f1f5f9;
+  stroke-width: 3.8;
+}
+
+.circular-chart-profile .circle {
+  fill: none;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+.circular-chart-profile .percentage {
+  fill: #1e293b;
+  font-size: 0.5rem;
+  text-anchor: middle;
+  font-weight: 700;
+}
+
+.color-green {
+  stroke: #10b981;
+}
+
+.color-blue {
+  stroke: #0284c7;
+}
+
+/* Bimbingan Chart */
+.stat-main-value {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.stat-main-value h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.stat-sub-value {
+  font-size: 0.85rem;
+  color: #10b981;
+  font-weight: 600;
+}
+
+.mini-bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 40px;
+  margin-top: auto;
+}
+
+.bar-item {
+  flex: 1;
+  background: #e0f2fe;
+  border-radius: 4px 4px 0 0;
+}
+
+.bar-item.active {
+  background: #005a8c;
+}
+
+/* Streak */
+.streak-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.streak-text {
+  font-size: 0.9rem;
+  color: #475569;
+  margin-bottom: auto;
+}
+
+.streak-dots {
+  display: flex;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.streak-dot {
+  flex: 1;
+  height: 6px;
+  background: #b91c1c;
+  border-radius: 3px;
+}
+
+.streak-dot.inactive {
+  background: #f1f5f9;
+}
+
+/* Target */
+.target-box {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.target-icon {
+  width: 32px;
+  height: 32px;
+  background: #16a34a;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.target-info h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #166534;
+  margin: 0 0 4px 0;
+}
+
+.target-info p {
+  font-size: 0.8rem;
+  color: #15803d;
+  margin: 0;
+  font-weight: 500;
+}
+
+.target-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.target-milestone {
+  font-size: 0.85rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+.target-date-badge {
+  background: #e0f2fe;
+  color: #0284c7;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+/* Tugas Aktif */
+.tugas-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.tugas-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tugas-bullet {
+  width: 6px;
+  height: 6px;
+  background: #94a3b8;
+  border-radius: 50%;
+}
+
+.tugas-text {
+  font-size: 0.85rem;
+  color: #1e293b;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.badge-urgent {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.badge-minor {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+/* Logbook */
+.logbook-dots {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.logbook-dot {
+  flex: 1;
+  height: 8px;
+  background: #005a8c;
+  border-radius: 4px;
+}
+
+.logbook-dot.inactive {
+  background: #e2e8f0;
+}
+
+@media (max-width: 1024px) {
+  .profile-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-header-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 24px 20px;
+  }
+
+  .profile-info-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .profile-tags {
+    flex-wrap: wrap;
+  }
+
+  .profile-name-light {
+    flex-wrap: wrap;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .profile-actions {
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .btn-edit-profile {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .profile-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skripsi-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 20px;
+    gap: 16px;
+  }
+
+  .prediksi-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 20px;
+    gap: 16px;
+  }
+
+  .target-footer {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}

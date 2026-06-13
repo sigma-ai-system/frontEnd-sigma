@@ -1,0 +1,932 @@
+/* ===== Logbook Page Styles ===== */
+
+/* Give the logbook page more horizontal space for the wide table */
+.dashboard-page:has(.logbook-header-section) .dash-content-container {
+  padding: 24px 24px;
+}
+
+.logbook-header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.logbook-header-section .page-subtitle {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.logbook-header-section .btn-primary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(90deg, #005689 0%, #006b3f 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.logbook-header-section .btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Stats Bar (single unified container) */
+.logbook-stats-bar {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 8px 0;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.stat-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 48px;
+  background-color: #e2e8f0;
+}
+
+.stat-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+}
+
+.stat-icon-wrapper .stat-icon {
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+.stat-icon-wrapper.blue {
+  background-color: #e0f2fe;
+  color: #0284c7;
+}
+
+.stat-icon-wrapper.green {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.stat-icon-wrapper.red {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Filter Section */
+.filter-section {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.filter-group.filter-action {
+  flex: 0 0 auto;
+}
+
+.filter-group label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.icon-left {
+  position: absolute;
+  left: 12px;
+  color: #64748b;
+  pointer-events: none;
+}
+
+.filter-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #1e293b;
+  background: #ffffff;
+  outline: none;
+}
+
+.filter-input.with-left-icon {
+  padding-left: 36px;
+}
+
+.btn-outline-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.2s;
+  height: 40px;
+  /* match input height */
+}
+
+.btn-outline-filter:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+/* Custom Dropdown used in filters */
+.custom-dropdown-container {
+  position: relative;
+  width: 100%;
+}
+
+.custom-dropdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #1e293b;
+  background: #ffffff;
+  cursor: pointer;
+  user-select: none;
+  height: 40px;
+}
+
+.custom-dropdown-header.active {
+  border-color: #006098;
+  box-shadow: 0 0 0 2px rgba(0, 96, 152, 0.1);
+}
+
+.custom-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.custom-dropdown-item {
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  color: #334155;
+  cursor: pointer;
+}
+
+.custom-dropdown-item:hover,
+.custom-dropdown-item.selected {
+  background: #f1f5f9;
+}
+
+/* Table Section */
+.table-container {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  overflow: visible;
+  /* Changed from hidden to allow dropdowns to overlap */
+  width: 100%;
+}
+
+.logbook-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.logbook-table th {
+  background: #e2e8f0;
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #475569;
+  border-bottom: none;
+}
+
+.logbook-table th:nth-child(1) {
+  width: 14%;
+}
+
+.logbook-table th:nth-child(2) {
+  width: auto;
+}
+
+.logbook-table th:nth-child(3) {
+  width: 14%;
+}
+
+.logbook-table th:nth-child(4) {
+  width: 13%;
+}
+
+.logbook-table th:nth-child(5) {
+  width: 6%;
+}
+
+.logbook-table th:first-child {
+  border-top-left-radius: 11px;
+}
+
+.logbook-table th:last-child {
+  border-top-right-radius: 11px;
+}
+
+.logbook-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+  font-size: 0.85rem;
+  vertical-align: top;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.date-text {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.time-text {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.activity-title {
+  font-weight: 500;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.activity-desc {
+  font-size: 0.85rem;
+  color: #475569;
+  margin-bottom: 8px;
+  max-width: 400px;
+  line-height: 1.4;
+}
+
+.activity-link {
+  font-size: 0.8rem;
+  color: #006098;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.activity-link svg {
+  font-size: 0.9rem;
+}
+
+.category-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.category-badge.pengerjaan-mandiri,
+.category-badge.bimbingan {
+  background-color: #e0f2fe;
+  color: #0284c7;
+}
+
+.category-badge.revisi {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.status-badge.disetujui {
+  background-color: #ecfdf5;
+  color: #16a34a;
+}
+
+.status-badge.disetujui .status-dot {
+  background-color: #16a34a;
+}
+
+.status-badge.menunggu {
+  background-color: #fef9c3;
+  color: #ca8a04;
+}
+
+.status-badge.menunggu .status-dot {
+  background-color: #ca8a04;
+}
+
+.status-badge.perlu-revisi {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.status-badge.perlu-revisi .status-dot {
+  background-color: #dc2626;
+}
+
+.action-btn.view-btn {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+
+.action-btn.view-btn:hover {
+  color: #1e293b;
+}
+
+.empty-state-row {
+  text-align: center;
+  padding: 60px 20px !important;
+  color: #64748b !important;
+  font-weight: 500;
+}
+
+/* Pagination */
+.pagination-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 11px;
+}
+
+.pagination-info {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 4px;
+}
+
+.page-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  color: #475569;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.page-btn:hover:not(.active) {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.page-btn.active {
+  background: #3b82f6;
+  color: #ffffff;
+  border-color: #3b82f6;
+}
+
+/* Logbook Modal Styles */
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalPopIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.logbook-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  /* For Safari support */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: overlayFadeIn 0.25s ease-out forwards;
+}
+
+.logbook-modal-container {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 750px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modalPopIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.logbook-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+}
+
+.logbook-modal-header h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.close-modal-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #64748b;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-modal-btn:hover {
+  color: #0f172a;
+}
+
+.logbook-modal-body {
+  padding: 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group.half {
+  flex: 1;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.logbook-input,
+.logbook-textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #1e293b;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+
+.logbook-input:focus,
+.logbook-textarea:focus {
+  border-color: #3b82f6;
+}
+
+.custom-select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.custom-select-wrapper select {
+  appearance: none;
+  padding-right: 36px;
+}
+
+.select-icon {
+  position: absolute;
+  right: 12px;
+  color: #64748b;
+  pointer-events: none;
+}
+
+.input-with-icon-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon-right .logbook-input {
+  padding-right: 36px;
+}
+
+.icon-right {
+  position: absolute;
+  right: 12px;
+  color: #64748b;
+  pointer-events: none;
+}
+
+.file-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.btn-upload {
+  padding: 10px 16px;
+  background-color: #e2e8f0;
+  border: none;
+  border-right: 1px solid #cbd5e1;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #334155;
+  cursor: pointer;
+}
+
+.file-name-display {
+  padding: 10px 14px;
+  flex: 1;
+  font-size: 0.9rem;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-submit-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(90deg, #0d6efd 0%, #0056b3 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-top: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(13, 110, 253, 0.2);
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.btn-submit-modal:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Success Modal Styles & Animations */
+.logbook-success-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: overlayFadeIn 0.3s ease-out forwards;
+}
+
+.logbook-success-content {
+  background-color: #ffffff;
+  border-radius: 16px;
+  width: 400px;
+  max-width: 95%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 40px 24px;
+  text-align: center;
+  position: relative;
+  animation: modalPopIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes successWrapperPop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes successIconPop {
+  0% {
+    transform: scale(0) rotate(-45deg);
+    opacity: 0;
+  }
+
+  60% {
+    transform: scale(1.2) rotate(10deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.success-icon-wrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #d1fae5;
+  margin-bottom: 24px;
+  position: relative;
+  animation: successWrapperPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Removed old pop animation for svg so the drawing animation can play properly */
+
+.animated-circle {
+  stroke-dasharray: 155;
+  stroke-dashoffset: 155;
+  animation: drawStroke 0.5s cubic-bezier(0.65, 0, 0.45, 1) 0.3s forwards;
+}
+
+.animated-check {
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  animation: drawStroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes drawStroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #0d6efd 0%, #0056b3 100%);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(13, 110, 253, 0.2);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* ===== Responsive Design ===== */
+@media screen and (max-width: 1024px) {
+  .logbook-header-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .logbook-header-section .btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logbook-stats-bar {
+    flex-wrap: wrap;
+  }
+
+  .stat-section {
+    padding: 16px;
+    gap: 12px;
+    min-width: 200px;
+    justify-content: center;
+  }
+
+  .stat-divider {
+    display: none;
+    /* Hide dividers if wrapped to save space and reduce clutter */
+  }
+
+  .stat-value {
+    font-size: 1.25rem;
+  }
+
+  .filter-section {
+    flex-wrap: wrap;
+  }
+
+  .filter-group {
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .filter-action {
+    width: 100%;
+    flex: none;
+  }
+
+  .btn-outline-filter {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logbook-header-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .logbook-stats-bar {
+    flex-direction: column;
+    padding: 16px;
+    gap: 8px;
+  }
+
+  .stat-section {
+    width: 100%;
+    padding: 8px 0;
+    justify-content: flex-start;
+  }
+
+  .stat-divider {
+    width: 100%;
+    height: 1px;
+    margin: 4px 0;
+  }
+
+  .filter-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-group.filter-action {
+    width: 100%;
+  }
+
+  .btn-outline-filter {
+    justify-content: center;
+  }
+
+  .table-container {
+    max-width: calc(100vw - 32px);
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 100px;
+    /* Prevents dropdown menu from being cut off by overflow-x */
+  }
+
+  .logbook-table {
+    min-width: 700px;
+    /* Forces horizontal scroll on small screens */
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .pagination-wrapper {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .logbook-modal-header,
+  .logbook-modal-body {
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logbook-header-section .btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .logbook-success-content {
+    padding: 32px 20px;
+  }
+}
