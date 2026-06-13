@@ -690,22 +690,31 @@ const LandingPage = () => {
             </div>
             <div className="faq-list">
               {faqs.map((faq, i) => (
-                <div
-                  key={i}
-                  className={`faq-item scroll-reveal ${openFaq === i ? "faq-open" : ""}`}
+                <div 
+                  key={i} 
+                  className="scroll-reveal" 
                   style={{ "--reveal-delay": `${i * 90}ms` }}
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
                 >
-                  <div className="faq-question">
-                    <div className="faq-question-left">
-                      <span className="faq-num">{faq.num}</span>
-                      <span className="faq-q-text">{faq.q}</span>
+                  <div
+                    className={`faq-item ${openFaq === i ? "faq-open" : ""}`}
+                    onClick={(event) => {
+                      if (event.target.closest(".faq-answer-wrapper")) {
+                        return;
+                      }
+                      setOpenFaq((currentOpenFaq) => (currentOpenFaq === i ? null : i));
+                    }}
+                  >
+                    <div className="faq-question">
+                      <div className="faq-question-left">
+                        <span className="faq-num">{faq.num}</span>
+                        <span className="faq-q-text">{faq.q}</span>
+                      </div>
+                      <FiChevronDown />
                     </div>
-                    <FiChevronDown />
-                  </div>
-                  <div className="faq-answer-wrapper">
-                    <div className="faq-answer-inner">
-                      <p>{faq.a}</p>
+                    <div className="faq-answer-wrapper" onClick={(event) => event.stopPropagation()}>
+                      <div className="faq-answer-inner">
+                        <p>{faq.a}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
