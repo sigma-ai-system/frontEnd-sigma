@@ -1,8 +1,8 @@
-# Sigma Frontend Repository Overview
+# SIGMA Frontend Repository Overview
 
 ## 1. Introduction
 
-This repository (`sigma-frontend`) contains the frontend application for **Sigma Frontend**. The application is designed to manage academic information, student data, SPP billing/payments, lecturer data, and reports in a unified interface.
+This repository (`sigma-frontend`) contains the frontend application for **SIGMA** — Sistem Informasi Manajemen Akademik. The application is designed to manage academic information, student data, SPP billing/payments, lecturer data, and reports in a unified interface.
 
 The project is built with **React** (v19), **Vite** (v7), and **Tailwind CSS** (v4). It integrates with:
 
