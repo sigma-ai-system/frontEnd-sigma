@@ -7,10 +7,9 @@ import Logo from "../../assets/logo.png";
 import "../../styles/login.css";
 
 import {
-  signup as signupApi,
-  login as loginApi,
   saveSession,
 } from "../../services/authApi";
+import axios from "axios";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -45,15 +44,34 @@ const Register = () => {
 
     try {
       setIsSubmitting(true);
-      await signupApi({ email, password });
-      const session = await loginApi({ email, password });
-      saveSession(session);
-      setSuccessMessage("Akun berhasil dibuat!");
-      localStorage.removeItem("onboarding_complete");
-      localStorage.setItem("sigma_fullName", fullName);
-      setTimeout(() => navigate("/dashboard"), 800);
+      
+      const payload = {
+        name: fullName,
+        email: email,
+        password: password
+      };
+
+      // Memanggil API Node.js menggunakan Axios
+      const response = await axios.post("https://sigma-backend-gules.vercel.app/api/auth/register", payload);
+
+      if (response.data.success) {
+        // Buat objek session agar sesuai dengan format yang digunakan authApi sebelumnya
+        const session = {
+          access_token: response.data.token,
+          user: { name: fullName, email: email }
+        };
+        saveSession(session);
+        
+        setSuccessMessage("Akun berhasil dibuat!");
+        localStorage.removeItem("onboarding_complete");
+        localStorage.setItem("sigma_fullName", fullName);
+        setTimeout(() => navigate("/dashboard"), 800);
+      } else {
+        throw new Error("Pendaftaran gagal.");
+      }
     } catch (error) {
-      setErrorMessage(error.message || "Gagal membuat akun. Coba lagi.");
+      const errMsg = error.response?.data?.message || error.message || "Gagal membuat akun. Coba lagi.";
+      setErrorMessage(errMsg);
     } finally {
       setIsSubmitting(false);
     }
