@@ -69,26 +69,7 @@ export async function login({ email, password }) {
   return session;
 }
 
-// SIGNUP — POST /auth/v1/signup
-export async function signup({ email, password }) {
-  if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
-    console.warn("Menggunakan MOCK SIGNUP karena .env belum diset.");
-    return {
-      user: { id: "mock-id-123", email }
-    };
-  }
 
-  const res = await fetch(`${AUTH_BASE_URL}/signup`, {
-    method: "POST",
-    headers: {
-      apikey: SUPABASE_ANON_KEY,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ email, password }),
-  });
-
-  return handleResponse(res);
-}
 
 
 export async function resetPassword({ email }) {
