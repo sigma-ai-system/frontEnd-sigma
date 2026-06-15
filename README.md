@@ -6,7 +6,7 @@ This repository (`sigma-frontend`) contains the frontend application for **SIGMA
 
 The project is built with **React** (v19), **Vite** (v7), and **Tailwind CSS** (v4). It integrates with:
 
-* **Supabase** for Authentication and Database management.
+* **Node.js/Express Backend** (hosted on Vercel) for Authentication and Database management via **Axios**.
 * Custom local state management and APIs for academic operations.
 
 The UI is designed to provide a highly interactive, responsive, and modern dashboard experience.
@@ -17,7 +17,7 @@ The UI is designed to provide a highly interactive, responsive, and modern dashb
 
 ### Purpose
 
-* Deliver a complete **academic management portal** for administrators/management (run under the Student/Mahasiswa role).
+* Deliver a complete **academic management portal** for administrators/management.
 * Support **student data management** (CRUD operations, class management, grade entry, CSV import/export, and attendance).
 * Manage **SPP billing** (payment tracking, details, and status updates).
 * Manage **lecturer information** (CRUD operations and attendance).
@@ -25,7 +25,7 @@ The UI is designed to provide a highly interactive, responsive, and modern dashb
 
 ### High-Level User Workflow
 
-1. **Authentication**: Users log in/register via Supabase Auth.
+1. **Authentication**: Users log in/register via the Express/Node.js backend API using Axios.
 2. **Dashboard**: Access statistical summaries (total students, lecturers, SPP payment status, total collection).
 3. **Data Management**:
    * **Mahasiswa**: Browse lists, manage classes (input grades, CSV upload/export), check attendance, edit student master profiles.
@@ -40,7 +40,6 @@ The UI is designed to provide a highly interactive, responsive, and modern dashb
 ### `/` (Root)
 
 * `README.md` — Project documentation (this file)
-* `CONTRIBUTING.md` — Contribution rules
 * `package.json` / `package-lock.json` — Project dependencies
 * `vite.config.js` — Vite setup
 * `.env` — Environment variables (ignored)
@@ -61,7 +60,7 @@ The UI is designed to provide a highly interactive, responsive, and modern dashb
 
 #### 3) Pages
 
-* **Login / Register** — User authentication
+* **Login / Register** — User authentication (Integrates with Vercel API via Axios)
 * **Dashboard** — Statistical widgets, pie charts (SPP Status), and recent logs
 * **Mahasiswa** — List, Manage Kelas, Input Nilai, Absensi, Master, Import CSV
 * **SPP** — List, Detail, Manage, Status edit
@@ -72,8 +71,8 @@ The UI is designed to provide a highly interactive, responsive, and modern dashb
 
 Inside `src/services/`:
 
-* `authApi.js` — Authentication
-* `sessionListener.js` — Supabase session helper
+* `authApi.js` — Authentication services
+* `sessionListener.js` — Session management and local storage helper
 
 #### 5) Styles
 
@@ -94,14 +93,13 @@ All CSS files are placed inside `src/styles/`:
 
 * Node.js 18+
 * npm
-* Supabase project (URL + anon key)
 
 ### Setup Steps
 
 #### 1. Clone Repository
 
 ```bash
-git clone https://github.com/your-org/sigma-frontend.git
+git clone https://github.com/sigma-ai-system/frontEnd-sigma.git
 cd sigma-frontend
 ```
 
@@ -111,25 +109,17 @@ cd sigma-frontend
 npm install
 ```
 
-#### 3. Configure Environment Variables
-
-Create a `.env` file in the root:
-
-```env
-VITE_SUPABASE_URL=https://<your-project>.supabase.co
-VITE_SUPABASE_ANON_KEY=<your-supabase-anon-key>
-```
-
-#### 4. Run Development Server
+#### 3. Run Development Server
 
 ```bash
 npm run dev
 ```
 
-#### 5. Build for Production
+#### 4. Build for Production
 
 ```bash
 npm run build
+npm run deploy
 ```
 
 ---
@@ -139,7 +129,8 @@ npm run build
 ### Manual Testing Checklist
 
 #### Authentication
-* Signup, login, logout
+* Signup (integrates with `https://sigma-backend-gules.vercel.app/api/auth/register` via Axios)
+* Login, logout
 
 #### Dashboard
 * Counter widget matching dummy data
